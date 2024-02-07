@@ -1,8 +1,7 @@
 /* eslint-disable prettier/prettier */
 import type { CollectionConfig } from 'payload/types'
 
-import { Hero } from '../../blocks/Hero'
-import { TwoColumns } from '../../blocks/TwoColumns'
+
 export const Denemepages: CollectionConfig={
     slug: 'denemepages',
     labels:{
@@ -30,8 +29,7 @@ export const Denemepages: CollectionConfig={
             label:"Layout",
             type: 'blocks',
             blocks: [
-                Hero,
-                TwoColumns
+             
                 
             ],
 
