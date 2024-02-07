@@ -36,7 +36,7 @@ dotenv.config({
 })
 
 export default buildConfig({
-  serverURL: 'http://localhost:3100',
+  serverURL: 'https://payloadcm-31a7cb16f3ea.herokuapp.com',
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
