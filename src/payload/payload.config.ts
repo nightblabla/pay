@@ -114,7 +114,7 @@ import redirects from '@payloadcms/plugin-redirects'
 import seo from '@payloadcms/plugin-seo'
 import type { GenerateTitle } from '@payloadcms/plugin-seo/types'
 import { slateEditor } from '@payloadcms/richtext-slate'
-import dotenv from 'dotenv'
+//import dotenv from 'dotenv'
 import path from 'path'
 import { buildConfig } from 'payload/config'
 
@@ -139,9 +139,9 @@ const generateTitle: GenerateTitle = () => {
   return 'My Website'
 }
 
-dotenv.config({
-  path: path.resolve(__dirname, '../../.env'),
-})
+// dotenv.config({
+//   path: path.resolve(__dirname, '../../.env'),
+// })
 
 export default buildConfig({
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || 'http://localhost:3100',
@@ -176,9 +176,9 @@ export default buildConfig({
       password: process.env.POSTGRES_PASSWORD,
       port: process.env.POSTGRES_PORT,
       connectionString: process.env.DATABASE_URI,
-    //   ssl: {
-    // rejectUnauthorized: false,
-    //       },
+      ssl: {
+    rejectUnauthorized: false,
+          },
       // ssl: {
       //   rejectUnauthorized: false, // This disables SSL certificate validation
       //   // ca: '/path/to/ca-certificate.crt', // Or provide the path to the CA certificate file
