@@ -171,13 +171,13 @@ export default buildConfig({
   db: postgresAdapter({
     pool: {
       connectionString: process.env.DATABASE_URI,
-      ssl: {
-        rejectUnauthorized: false, // This disables SSL certificate validation
-        // ca: '/path/to/ca-certificate.crt', // Or provide the path to the CA certificate file
-        // Alternatively, you can provide the certificate content directly:
-        // ca: '-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----',
-        //v
-      },
+      // ssl: {
+      //   rejectUnauthorized: false, // This disables SSL certificate validation
+      //   // ca: '/path/to/ca-certificate.crt', // Or provide the path to the CA certificate file
+      //   // Alternatively, you can provide the certificate content directly:
+      //   // ca: '-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----',
+      //   //v
+      // },
     
     },
   }),
