@@ -170,15 +170,15 @@ export default buildConfig({
   editor: slateEditor({}),
   db: postgresAdapter({
     pool: {
-      user: process.env.DATABASE_USER,
-      host: process.env.DATABASE_HOST,
-      database: process.env.DATABASE_DB,
-      password: process.env.DATABASE_PASSWORD,
-      port: process.env.DATABASE_PORT,
+      user: process.env.POSTGRES_USER,
+      host: process.env.POSTGRES_HOST,
+      database: process.env.POSTGRES_DB,
+      password: process.env.POSTGRES_PASSWORD,
+      port: process.env.POSTGRES_PORT,
       connectionString: process.env.DATABASE_URI,
     //   ssl: {
-    //     rejectUnauthorized: false,
-    // },
+    // rejectUnauthorized: false,
+    //       },
       // ssl: {
       //   rejectUnauthorized: false, // This disables SSL certificate validation
       //   // ca: '/path/to/ca-certificate.crt', // Or provide the path to the CA certificate file
@@ -197,7 +197,7 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
   },
-  cors: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''],
+  cors:  "*",
   csrf: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ''],
   endpoints: [
     {
