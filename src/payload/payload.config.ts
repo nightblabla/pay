@@ -176,6 +176,9 @@ export default buildConfig({
       password: process.env.POSTGRES_PASSWORD,
       port: process.env.POSTGRES_PORT,
       connectionString: process.env.DATABASE_URI,
+      ssl: {
+        rejectUnauthorized: false,
+    },
       // ssl: {
       //   rejectUnauthorized: false, // This disables SSL certificate validation
       //   // ca: '/path/to/ca-certificate.crt', // Or provide the path to the CA certificate file
