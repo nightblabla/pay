@@ -176,6 +176,7 @@ export default buildConfig({
         // ca: '/path/to/ca-certificate.crt', // Or provide the path to the CA certificate file
         // Alternatively, you can provide the certificate content directly:
         // ca: '-----BEGIN CERTIFICATE-----\n...\n-----END CERTIFICATE-----',
+        //v
       },
     
     },
