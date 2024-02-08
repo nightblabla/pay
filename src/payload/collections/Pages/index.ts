@@ -11,7 +11,7 @@ import { slugField } from '../../fields/slug'
 import { populateArchiveBlock } from '../../hooks/populateArchiveBlock'
 import { populatePublishedAt } from '../../hooks/populatePublishedAt'
 import { revalidatePage } from './hooks/revalidatePage'
-
+//i
 export const Pages: CollectionConfig = {
   slug: 'pages',
   admin: {
