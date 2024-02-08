@@ -170,6 +170,11 @@ export default buildConfig({
   editor: slateEditor({}),
   db: postgresAdapter({
     pool: {
+      user: process.env.POSTGRES_USER,
+      host: process.env.POSTGRES_HOST,
+      database: process.env.POSTGRES_DB,
+      password: process.env.POSTGRES_PASSWORD,
+      port: process.env.POSTGRES_PORT,
       connectionString: process.env.DATABASE_URI,
       // ssl: {
       //   rejectUnauthorized: false, // This disables SSL certificate validation
