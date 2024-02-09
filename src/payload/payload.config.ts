@@ -145,7 +145,7 @@ const generateTitle: GenerateTitle = () => {
 // })
 
 export default buildConfig({
-  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || 'https://payup-f57a849d1622.herokuapp.com/',
+  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || 'https://payup-f57a849d1622.herokuapp.com',
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
