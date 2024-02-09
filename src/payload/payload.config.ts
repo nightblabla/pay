@@ -134,7 +134,8 @@ import { seed } from './endpoints/seed'
 import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports
+const { parse } = require("pg-connection-string");
 const generateTitle: GenerateTitle = () => {
   return 'My Website'
 }
@@ -168,17 +169,19 @@ export default buildConfig({
     }),
   },
   editor: slateEditor({}),
+
   db: postgresAdapter({
     pool: {
-      user: process.env.POSTGRES_USER,
-      host: process.env.POSTGRES_HOST,
-      database: process.env.POSTGRES_DB,
-      password: process.env.POSTGRES_PASSWORD,
-      port: process.env.POSTGRES_PORT,
+      // client: "postgres",
+      // user: process.env.POSTGRES_USER,
+      // host: process.env.POSTGRES_HOST,
+      // database: process.env.POSTGRES_DB,
+      // password: process.env.POSTGRES_PASSWORD,
+      // port: process.env.POSTGRES_PORT,
       connectionString: process.env.DATABASE_URI,
-      ssl: {
-    rejectUnauthorized: false,
-          },
+    //   ssl: {
+    // rejectUnauthorized: false,
+    //       },
       // ssl: {
       //   rejectUnauthorized: false, // This disables SSL certificate validation
       //   // ca: '/path/to/ca-certificate.crt', // Or provide the path to the CA certificate file
