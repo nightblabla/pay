@@ -28,7 +28,7 @@ const start = async (): Promise<void> => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
     },
   })
-
+  //d
   if (process.env.PAYLOAD_SEED === 'true') {
     await seed(payload)
     process.exit()
@@ -56,7 +56,7 @@ const start = async (): Promise<void> => {
   nextApp.prepare().then(() => {
     payload.logger.info('Starting Next.js...')
 
-    app.listen(PORT, async () => {
+    app.listen(process.env.PORT || 3000, async () => {
       payload.logger.info(`Next.js App URL: ${process.env.PAYLOAD_PUBLIC_SERVER_URL}`)
     })
   })
