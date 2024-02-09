@@ -172,12 +172,12 @@ export default buildConfig({
 
   db: postgresAdapter({
     pool: {
-      client: "postgres",
-      user: process.env.DATABASE_USER,
-      host: process.env.DATABASE_HOST,
-      database: process.env.DATABASE_DB,
-      password: process.env.DATABASE_PASSWORD,
-      port: process.env.DATABASE_PORT,
+      // client: "postgres",
+      // user: process.env.DATABASE_USER,
+      // host: process.env.DATABASE_HOST,
+      // database: process.env.DATABASE_DB,
+      // password: process.env.DATABASE_PASSWORD,
+      // port: process.env.DATABASE_PORT,
       connectionString: process.env.DATABASE_URI,
       ssl: {
     rejectUnauthorized: false,
