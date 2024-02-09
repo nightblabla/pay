@@ -135,7 +135,7 @@ import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars, @typescript-eslint/no-var-requires, @typescript-eslint/no-require-imports
-const { parse } = require("pg-connection-string");
+//const { parse } = require("pg-connection-string");
 const generateTitle: GenerateTitle = () => {
   return 'My Website'
 }
