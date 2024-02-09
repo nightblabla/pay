@@ -145,7 +145,7 @@ const generateTitle: GenerateTitle = () => {
 // })
 
 export default buildConfig({
-  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || 'http://localhost:3100',
+  serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL || 'https://payup-f57a849d1622.herokuapp.com/',
   admin: {
     user: Users.slug,
     bundler: webpackBundler(),
@@ -179,9 +179,9 @@ export default buildConfig({
       // password: process.env.DATABASE_PASSWORD,
       // port: process.env.DATABASE_PORT,
       connectionString: process.env.DATABASE_URI,
-      ssl: {
-    rejectUnauthorized: false,
-          },
+    //   ssl: {
+    // rejectUnauthorized: false,
+    //       },
       // ssl: {
       //   rejectUnauthorized: false, // This disables SSL certificate validation
       //   // ca: '/path/to/ca-certificate.crt', // Or provide the path to the CA certificate file
