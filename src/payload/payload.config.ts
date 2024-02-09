@@ -178,7 +178,7 @@ export default buildConfig({
       // database: process.env.POSTGRES_DB,
       // password: process.env.POSTGRES_PASSWORD,
       // port: process.env.POSTGRES_PORT,
-      connectionString: process.env.DATABASE_URI,
+      connectionString: "postgres://ncudzevbyujmtc:f5768326e32e14798f3d51fb645e84ed8791bcfe0430c1aecf530c7348e893a5@ec2-35-169-9-79.compute-1.amazonaws.com:5432/d9e3j2r7goott4",
       ssl: {
     rejectUnauthorized: false,
           },
